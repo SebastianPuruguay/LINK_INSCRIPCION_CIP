@@ -1,0 +1,191 @@
+/* Estilos generales y fuente */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* Contenedor principal para centrar todo */
+.main-container {
+    width: 100%;
+    max-width: 880px;
+    margin: 20px auto;
+}
+
+/* Contenedor del banner */
+.banner-container {
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden; /* Para que la imagen respete el borde redondeado */
+}
+
+.banner-container img {
+    width: 100%;
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}
+
+/* Contenedor del formulario */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* Enlace para ver el programa */
+.program-link {
+    display: block;
+    width: max-content;
+    margin: 0 auto 25px auto;
+    padding: 10px 20px;
+    background-color: #e7f1ff;
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.program-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Filas para agrupar campos */
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.half-width {
+    flex: 1; /* Ocupa la mitad del espacio disponible */
+}
+
+/* Clase para ocultar campos dinámicamente */
+.hidden-field {
+    display: none;
+}
+
+/* Estilos para etiquetas y campos de entrada */
+label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+input:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 5px;
+    margin-right: 12px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.checkbox-group label {
+    font-weight: 400;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.error-text {
+    color: #d93025;
+    font-size: 12px;
+    margin-top: 4px;
+    min-height: 1em;
+}
+
+.loader-text {
+    color: #007bff;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .main-container {
+        margin: 10px;
+    }
+    .form-container {
+        padding: 20px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+}

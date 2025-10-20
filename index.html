@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción al Curso</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="banner-container">
+            <img src="https://portal.insnsb.gob.pe/docencia/wp-content/uploads/HEAD_PEDIATRIA.png" alt="Banner del Curso de Pediatría">
+        </div>
+
+        <div class="form-container">
+            <form id="inscripcionForm">
+                <h2>Formulario de Inscripción</h2>
+                
+                <a 
+                    href="https://portal.insnsb.gob.pe/docencia/wp-content/uploads/programa_9CIP.pdf" 
+                    target="_blank" 
+                    class="program-link">
+                    VER EL PROGRAMA
+                </a>
+
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="tipoDocumento">Tipo de Documento</label>
+                        <select id="tipoDocumento" name="tipoDocumento" required>
+                            <option value="DNI">DNI</option>
+                            <option value="CE">Carné de Extranjería</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                        </select>
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="numeroDocumento">Número de Documento</label>
+                        <input type="text" id="numeroDocumento" name="numeroDocumento" placeholder="Ingrese el número" required>
+                        <small id="dniLoader" class="loader-text" style="display:none;">Consultando...</small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="nombres">Nombres</label>
+                        <input type="text" id="nombres" name="nombres" placeholder="Bloqueado para DNI" disabled required>
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Bloqueado para DNI" disabled required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="verificarCorreo">Verificar Correo</label>
+                        <input type="email" id="verificarCorreo" name="verificarCorreo" placeholder="Vuelva a escribir su correo" required>
+                        <small id="emailError" class="error-text"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="profesion">Profesión</label>
+                        <input type="text" id="profesion" name="profesion" required>
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="celular">Celular (WhatsApp)</label>
+                        <input type="tel" id="celular" name="celular" placeholder="Ej: 987654321" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="pais">País de Residencia</label>
+                        <select id="pais" name="pais" required></select>
+                    </div>
+                    <div class="form-group half-width hidden-field" id="departamentoContainer">
+                        <label for="departamento">Departamento</label>
+                        <select id="departamento" name="departamento"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoInstitucion">Institución de Procedencia</label>
+                    <select id="tipoInstitucion" name="tipoInstitucion" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="INSNSB">INSTITUTO NACIONAL DE SALUD DEL NIÑO SAN BORJA (INSNSB)</option>
+                        <option value="IPRESS">IPRESS</option>
+                        <option value="Universidad">Universidad</option>
+                        <option value="Otra">Otra Organización</option>
+                    </select>
+                </div>
+                
+                <div class="form-group hidden-field" id="ipressContainer">
+                    <label for="nombreIpress">Nombre de la IPRESS</label>
+                    <input type="text" id="nombreIpress" name="nombreIpress">
+                </div>
+                <div class="form-group hidden-field" id="universidadContainer">
+                    <label for="listaUniversidades">Seleccione la Universidad</label>
+                    <select id="listaUniversidades" name="listaUniversidades"></select>
+                </div>
+                <div class="form-group hidden-field" id="otraOrganizacionContainer">
+                    <label for="nombreOtraOrganizacion">Nombre de la Organización</label>
+                    <input type="text" id="nombreOtraOrganizacion" name="nombreOtraOrganizacion">
+                </div>
+
+                <div class="form-group">
+                    <label for="medioEnterado">¿Cómo se enteró del curso?</label>
+                    <select id="medioEnterado" name="medioEnterado" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="Redes Sociales">Redes Sociales (Facebook, Instagram, etc.)</option>
+                        <option value="Correo Electrónico">Correo Electrónico</option>
+                        <option value="Recomendación">Recomendación de un colega</option>
+                        <option value="Página Web">Página Web de la Institución</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="declaro" name="declaro" required>
+                    <label for="declaro">
+                        <b>Declaro y acepto:</b> De conformidad con la Ley N.° 29733 y el Decreto Supremo N.° 003-2013-JUS, el usuario autoriza el uso de sus datos personales para fines académicos, para eventos que el INSN SB organice, auspicie o participe, los que podrán ser comunicados a través de envío de correos electrónicos, mensaje de texto o WhatsApp.
+                    </label>
+                </div>
+                <small id="checkError" class="error-text"></small>
+
+                <button type="submit">Inscribirme</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
