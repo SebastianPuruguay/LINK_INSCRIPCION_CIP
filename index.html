@@ -69,8 +69,17 @@
                 <div class="form-row">
                     <div class="form-group half-width">
                         <label for="profesion">Profesión</label>
-                        <input type="text" id="profesion" name="profesion" required>
+                        <select id="profesion" name="profesion" required>
+                            </select>
                     </div>
+                    <div class="form-group half-width hidden-field" id="especialidadContainer">
+                        <label for="especialidad">Especialidad</label>
+                        <select id="especialidad" name="especialidad">
+                            </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
                     <div class="form-group half-width">
                         <label for="celular">Celular (WhatsApp)</label>
                         <input type="tel" id="celular" name="celular" placeholder="Ej: 987654321" required>
@@ -94,8 +103,8 @@
                         <option value="">Seleccione una opción</option>
                         <option value="INSNSB">INSTITUTO NACIONAL DE SALUD DEL NIÑO SAN BORJA (INSNSB)</option>
                         <option value="IPRESS">IPRESS</option>
-                        <option value="Universidad">Universidad</option>
-                        <option value="Otra">Otra Organización</option>
+                        <option value="UNIVERSIDAD">Universidad</option>
+                        <option value="OTRA">Otra Organización</option>
                     </select>
                 </div>
                 
@@ -116,11 +125,12 @@
                     <label for="medioEnterado">¿Cómo se enteró del curso?</label>
                     <select id="medioEnterado" name="medioEnterado" required>
                         <option value="">Seleccione una opción</option>
-                        <option value="Redes Sociales">Redes Sociales (Facebook, Instagram, etc.)</option>
-                        <option value="Correo Electrónico">Correo Electrónico</option>
-                        <option value="Recomendación">Recomendación de un colega</option>
-                        <option value="Página Web">Página Web de la Institución</option>
-                        <option value="Otro">Otro</option>
+                        <option value="WHATSAPP">WhatsApp</option>
+                        <option value="REDES SOCIALES">Redes Sociales</option>
+                        <option value="CORREO INSTITUCIONAL">Correo Institucional</option>
+                        <option value="COMPAÑEROS/AMIGOS">Compañeros/Amigos</option>
+                        <option value="PAGINA WEB INSTITUCIONAL">Página Web Institucional</option>
+                        <option value="OTRO">Otro</option>
                     </select>
                 </div>
                 

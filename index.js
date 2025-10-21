@@ -12,10 +12,46 @@ document.addEventListener('DOMContentLoaded', () => {
         // Agrega el resto de la larga lista de universidades aquí para mantenerlo limpio
     ];
 
-    const paises = ["Afganistán", "Albania", "Alemania", "Andorra", "Angola", "Antigua y Barbuda", "Arabia Saudita", "Argelia", "Argentina", "Armenia", "Australia", "Austria", "Azerbaiyán", "Bahamas", "Bangladés", "Barbados", "Baréin", "Bélgica", "Belice", "Benín", "Bielorrusia", "Birmania", "Bolivia", "Bosnia y Herzegovina", "Botsuana", "Brasil", "Brunéi", "Bulgaria", "Burkina Faso", "Burundi", "Bután", "Cabo Verde", "Camboya", "Camerún", "Canadá", "Catar", "Chad", "Chile", "China", "Chipre", "Ciudad del Vaticano", "Colombia", "Comoras", "Corea del Norte", "Corea del Sur", "Costa de Marfil", "Costa Rica", "Croacia", "Cuba", "Dinamarca", "Dominica", "Ecuador", "Egipto", "El Salvador", "Emiratos Árabes Unidos", "Eritrea", "Eslovaquia", "Eslovenia", "España", "Estados Unidos", "Estonia", "Etiopía", "Filipinas", "Finlandia", "Fiyi", "Francia", "Gabón", "Gambia", "Georgia", "Ghana", "Granada", "Grecia", "Guatemala", "Guyana", "Guinea", "Guinea ecuatorial", "Guinea-Bisáu", "Haití", "Honduras", "Hungría", "India", "Indonesia", "Irak", "Irán", "Irlanda", "Islandia", "Islas Marshall", "Islas Salomón", "Israel", "Italia", "Jamaica", "Japón", "Jordania", "Kazajistán", "Kenia", "Kirguistán", "Kiribati", "Kuwait", "Laos", "Lesoto", "Letonia", "Líbano", "Liberia", "Libia", "Liechtenstein", "Lituania", "Luxemburgo", "Macedonia del Norte", "Madagascar", "Malasia", "Malaui", "Maldivas", "Malí", "Malta", "Marruecos", "Mauricio", "Mauritania", "México", "Micronesia", "Moldavia", "Mónaco", "Mongolia", "Montenegro", "Mozambique", "Namibia", "Nauru", "Nepal", "Nicaragua", "Níger", "Nigeria", "Noruega", "Nueva Zelanda", "Omán", "Países Bajos", "Pakistán", "Palaos", "Panamá", "Papúa Nueva Guinea", "Paraguay", "Perú", "Polonia", "Portugal", "Reino Unido", "República Centroafricana", "República Checa", "República del Congo", "República Democrática del Congo", "República Dominicana", "Ruanda", "Rumanía", "Rusia", "Samoa", "San Cristóbal y Nieves", "San Marino", "San Vicente y las Granadinas", "Santa Lucía", "Santo Tomé y Príncipe", "Senegal", "Serbia", "Seychelles", "Sierra Leona", "Singapur", "Siria", "Somalia", "Sri Lanka", "Suazilandia", "Sudáfrica", "Sudán", "Sudán del Sur", "Suecia", "Suiza", "Surinam", "Tailandia", "Tanzania", "Tayikistán", "Timor Oriental", "Togo", "Tonga", "Trinidad y Tobago", "Túnez", "Turkmenistán", "Turquía", "Tuvalu", "Ucrania", "Uganda", "Uruguay", "Uzbekistán", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Yibuti", "Zambia", "Zimbabue"];
-    
-    const departamentosPeru = ["Amazonas", "Áncash", "Apurímac", "Arequipa", "Ayacucho", "Cajamarca", "Callao", "Cusco", "Huancavelica", "Huánuco", "Ica", "Junín", "La Libertad", "Lambayeque", "Lima", "Loreto", "Madre de Dios", "Moquegua", "Pasco", "Piura", "Puno", "San Martín", "Tacna", "Tumbes", "Ucayali"];
+const paises = [
+  "AFGANISTAN", "ALBANIA", "ALEMANIA", "ANDORRA", "ANGOLA", "ANTIGUA Y BARBUDA", "ARABIA SAUDITA", "ARGELIA", "ARGENTINA", "ARMENIA",
+  "AUSTRALIA", "AUSTRIA", "AZERBAIYAN", "BAHAMAS", "BANGLADES", "BARBADOS", "BAREIN", "BELGICA", "BELICE", "BENIN",
+  "BIELORRUSIA", "BIRMANIA", "BOLIVIA", "BOSNIA Y HERZEGOVINA", "BOTSUANA", "BRASIL", "BRUNEI", "BULGARIA", "BURKINA FASO", "BURUNDI",
+  "BUTAN", "CABO VERDE", "CAMBOYA", "CAMERUN", "CANADA", "CATAR", "CHAD", "CHILE", "CHINA", "CHIPRE",
+  "CIUDAD DEL VATICANO", "COLOMBIA", "COMORAS", "COREA DEL NORTE", "COREA DEL SUR", "COSTA DE MARFIL", "COSTA RICA", "CROACIA", "CUBA", "DINAMARCA",
+  "DOMINICA", "ECUADOR", "EGIPTO", "EL SALVADOR", "EMIRATOS ARABES UNIDOS", "ERITREA", "ESLOVAQUIA", "ESLOVENIA", "ESPANA", "ESTADOS UNIDOS",
+  "ESTONIA", "ETIOPIA", "FILIPINAS", "FINLANDIA", "FIYI", "FRANCIA", "GABON", "GAMBIA", "GEORGIA", "GHANA",
+  "GRANADA", "GRECIA", "GUATEMALA", "GUYANA", "GUINEA", "GUINEA ECUATORIAL", "GUINEA-BISAU", "HAITI", "HONDURAS", "HUNGRIA",
+  "INDIA", "INDONESIA", "IRAK", "IRAN", "IRLANDA", "ISLANDIA", "ISLAS MARSHALL", "ISLAS SALOMON", "ISRAEL", "ITALIA",
+  "JAMAICA", "JAPON", "JORDANIA", "KAZAJISTAN", "KENIA", "KIRGUISTAN", "KIRIBATI", "KUWAIT", "LAOS", "LESOTO",
+  "LETONIA", "LIBANO", "LIBERIA", "LIBIA", "LIECHTENSTEIN", "LITUANIA", "LUXEMBURGO", "MACEDONIA DEL NORTE", "MADAGASCAR", "MALASIA",
+  "MALAWI", "MALDIVAS", "MALI", "MALTA", "MARRUECOS", "MAURICIO", "MAURITANIA", "MEXICO", "MICRONESIA", "MOLDAVIA",
+  "MONACO", "MONGOLIA", "MONTENEGRO", "MOZAMBIQUE", "NAMIBIA", "NAURU", "NEPAL", "NICARAGUA", "NIGER", "NIGERIA",
+  "NORUEGA", "NUEVA ZELANDA", "OMAN", "PAISES BAJOS", "PAKISTAN", "PALAOS", "PANAMA", "PAPUA NUEVA GUINEA", "PARAGUAY", "PERU",
+  "POLONIA", "PORTUGAL", "REINO UNIDO", "REPUBLICA CENTROAFRICANA", "REPUBLICA CHECA", "REPUBLICA DEL CONGO", "REPUBLICA DEMOCRATICA DEL CONGO", "REPUBLICA DOMINICANA",
+  "RUANDA", "RUMANIA", "RUSIA", "SAMOA", "SAN CRISTOBAL Y NIEVES", "SAN MARINO", "SAN VICENTE Y LAS GRANADINAS", "SANTA LUCIA",
+  "SANTO TOME Y PRINCIPE", "SENEGAL", "SERBIA", "SEYCHELLES", "SIERRA LEONA", "SINGAPUR", "SIRIA", "SOMALIA", "SRI LANKA",
+  "SUAZILANDIA", "SUDAFRICA", "SUDAN", "SUDAN DEL SUR", "SUECIA", "SUIZA", "SURINAM", "TAILANDIA", "TANZANIA", "TAYIKISTAN",
+  "TIMOR ORIENTAL", "TOGO", "TONGA", "TRINIDAD Y TOBAGO", "TUNEZ", "TURKMENISTAN", "TURQUIA", "TUVALU", "UCRANIA", "UGANDA",
+  "URUGUAY", "UZBEKISTAN", "VANUATU", "VENEZUELA", "VIETNAM", "YEMEN", "YIBUTI", "ZAMBIA", "ZIMBABUE"
+];
 
+const departamentosPeru = [
+  "AMAZONAS", "ANCASH", "APURIMAC", "AREQUIPA", "AYACUCHO", "CAJAMARCA", "CALLAO", "CUSCO", "HUANCAVELICA", "HUANUCO",
+  "ICA", "JUNIN", "LA LIBERTAD", "LAMBAYEQUE", "LIMA", "LORETO", "MADRE DE DIOS", "MOQUEGUA", "PASCO", "PIURA",
+  "PUNO", "SAN MARTIN", "TACNA", "TUMBES", "UCAYALI"
+];
+// AÑADE ESTAS LISTAS DE DATOS AL INICIO DE TU SCRIPT
+const profesiones = [
+    "ADMINISTRACION DE EMPRESAS", "ADMINISTRACION EN TURISMO", "AGRONOMIA", "ANALISIS DE DATOS", "ANTROPOLOGIA", "ARQUITECTURA", "ARTE Y DISEÑO GRAFICO", "BIOLOGIA", "BIOTECNOLOGIA", "BIBLIOTECOLOGIA Y CIENCIAS DE LA INFORMACION", "CIENCIAS DE LA COMPUTACION", "CIENCIAS DE LA COMUNICACIÓN", "CIENCIAS DEL DEPORTE", "CIENCIAS POLITICAS", "CINE Y TELEVISION", "COMUNICACIÓN SOCIAL", "CONTABILIDAD", "DANZA", "DERECHO", "DISEÑO DE INTERIORES", "DISEÑO DE MODA", "DISEÑO DE PRODUCTOS", "ECONOMIA", "EDUCACION FISICA", "EDUCACION INICIAL", "EDUCACION PRIMARIA", "EDUCACION SECUNDARIA", "ENFERMERIA", "ESTADISTICA", "ESTADISTICA E INFORMATICA", "FARMACIA Y BIOQUIMICA", "FILOSOFIA", "FISICA", "FISIOTERAPIA", "GASTRONOMIA", "GESTION CULTURAL", "HISTORIA", "INGENIERIA AMBIENTAL", "INGENIERIA BIOMEDICA", "INGENIERIA CIVIL", "INGENIERIA DE ALIMENTOS", "INGENIERIA DE MINAS", "INGENIERIA DE SISTEMAS", "INGENIERIA DE SOFTWARE", "INGENIERIA DE TELECOMUNICACIONES", "INGENIERIA ELECTRONICA", "INGENIERIA ELECTRICA", "INGENIERIA GEOLOGICA", "INGENIERIA INDUSTRIAL", "INGENIERIA MECANICA", "INGENIERIA MECATRONICA", "INGENIERIA METALURGICA", "INGENIERIA QUIMICA", "INGENIERIA TEXTIL", "LABORATORIO CLINICO", "LITERATURA", "LINGÜÍSTICA", "MARKETING", "MATEMATICAS", "MATEMATICAS APLICADAS", "MEDICINA HUMANA", "MEDICINA VETERINARIA", "MUSICA", "NUTRICION Y DIETETICA", "OBSTETRICIA", "ODONTOLOGIA", "OPTOMETRIA", "PSICOLOGIA", "PUBLICIDAD", "QUIMICA", "RELACIONES INTERNACIONALES", "SOCIOLOGIA", "TEATRO", "TECNICO EN ADMINISTRACION", "TECNICO EN COMERCIO EXTERIOR", "TECNICO EN COMPUTACION E INFORMATICA", "TECNICO EN CONTABILIDAD", "TECNICO EN ELECTRICIDAD", "TECNICO EN ELECTRONICA INDUSTRIAL", "TECNICO EN ENFERMERIA", "TECNICO EN FARMACIA", "TECNICO EN FISIOTERAPIA", "TECNICO EN GASTRONOMIA", "TECNICO EN HOTELERIA Y TURISMO", "TECNICO EN INSTRUMENTACION QUIRURGICA", "TECNICO EN LABORATORIO CLINICO", "TECNICO EN LOGISTICA", "TECNICO EN MARKETING", "TECNICO EN MECANICA AUTOMOTRIZ", "TECNICO EN OPTOMETRIA", "TECNICO EN RADIOLOGIA", "TECNICO EN TELECOMUNICACIONES", "TERAPIA FISICA Y REHABILITACION", "TERAPIA OCUPACIONAL", "TRABAJO SOCIAL", "TRADUCCION E INTERPRETACION", "TURISMO Y HOTELERIA", "ZOOTECNIA", "NO PROFESIONAL/ ESTUDIANTE"
+].sort();
+
+const especialidadesMedicina = [
+    "ADMINISTRACION EN SALUD", "ALERGOLOGIA", "ALGOLOGIA", "ANALISIS CLINICO", "ANATOMIA PATOLOGICA", "ANESTESIOLOGIA", "ANGIOLOGIA", "AUDITORIA MEDICA", "BIOQUIMICA CLINICA", "CARDIOLOGIA", "CIRUGIA CARDIACA", "CIRUGIA CRANEOFACIAL", "CIRUGIA GENERAL", "CIRUGIA ONCOLOGICA", "CIRUGIA ORAL Y MAXILOFACIAL", "CIRUGIA ORTOPEDICA", "CIRUGIA PEDIATRICA", "CIRUGIA PLASTICA", "CIRUGIA TORACICA", "CIRUGIA VASCULAR", "COLOPROCTOLOGIA", "DERMATOLOGIA", "EMBRIOLOGIA", "ENDOCRINOLOGIA", "EPIDEMIOLOGIA", "ESTOMATOLOGIA", "FARMACOLOGIA", "FARMACOLOGIA CLINICA", "FONIATRIA", "GASTROENTEROLOGIA", "GENETICA", "GENETICA MEDICA", "GERIATRIA", "GINECOLOGIA Y OBSTETRICIA O TOCOLOGIA", "HEMATOLOGIA", "HEPATOLOGIA", "INFECTOLOGIA", "INMUNOLOGIA", "MEDICINA AEROESPACIAL", "MEDICINA DE EMERGENCIA", "MEDICINA DEL DEPORTE", "MEDICINA DEL TRABAJO", "MEDICINA FAMILIAR Y COMUNITARIA", "MEDICINA FISICA Y REHABILITACION", "MEDICINA FORENSE", "MEDICINA INTENSIVA", "MEDICINA INTERNA", "MEDICINA NUCLEAR", "MEDICINA PALIATIVA", "MEDICINA PREVENTIVA Y SALUD PUBLICA", "MICROBIOLOGIA Y PARASITOLOGIA", "NEFROLOGIA", "NEUMOLOGIA", "NEUROCIRUGIA", "NEUROFISIOLOGIA CLINICA", "NEUROLOGIA", "NUTRIOLOGIA", "ODONTOLOGIA", "OFTALMOLOGIA", "ONCOLOGIA MEDICA", "ONCOLOGIA RADIOTERAPICA", "OTORRINOLARINGOLOGIA", "PEDIATRIA", "PSIQUIATRIA", "RADIOLOGIA", "REUMATOLOGIA", "SALUD PUBLICA", "TOXICOLOGIA", "TRAUMATOLOGIA Y ORTOPEDIA", "UROLOGIA"
+].sort();
+
+const especialidadesEnfermeria = [
+    "ENFERMERIA NEONATAL", "ENFERMERIA PEDIATRICA", "ENFERMERIA OBSTETRICO-GINECOLOGICA", "ENFERMERIA GERIATRICA", "ENFERMERIA DE CUIDADOS PALIATIVOS", "ENFERMERIA INTENSIVA", "ENFERMERIA ONCOLOGICA", "ENFERMERIA DE URGENCIAS", "ENFERMERIA FAMILIAR Y COMUNITARIA", "ENFERMERIA ADMINISTRATIVA Y DE GESTION"
+].sort();
 
     // --- REFERENCIAS A ELEMENTOS DEL DOM ---
     const form = document.getElementById('inscripcionForm');
@@ -29,7 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailError = document.getElementById('emailError');
     const declaroCheck = document.getElementById('declaro');
     const checkError = document.getElementById('checkError');
-
+    // AÑADE ESTAS LÍNEAS EN LA SECCIÓN DE "REFERENCIAS A ELEMENTOS DEL DOM"
+    const profesionSelect = document.getElementById('profesion');
+    const especialidadContainer = document.getElementById('especialidadContainer');
+    const especialidadSelect = document.getElementById('especialidad');
     // Nuevos elementos dinámicos
     const paisSelect = document.getElementById('pais');
     const departamentoContainer = document.getElementById('departamentoContainer');
@@ -56,14 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     populateSelect(paisSelect, paises);
-    paisSelect.value = "Perú"; // Preseleccionar Perú
+    paisSelect.value = "PERU"; // Preseleccionar Perú
     populateSelect(departamentoSelect, departamentosPeru);
     populateSelect(listaUniversidades, universidades.sort());
 
 
     // --- LÓGICA DE VISIBILIDAD DE CAMPOS ---
     const handlePaisChange = () => {
-        if (paisSelect.value === 'Perú') {
+        if (paisSelect.value === 'PERU') {
             departamentoContainer.classList.remove('hidden-field');
             departamentoSelect.required = true;
         } else {
@@ -84,16 +123,38 @@ document.addEventListener('DOMContentLoaded', () => {
         if (selectedValue === 'IPRESS') {
             ipressContainer.classList.remove('hidden-field');
             nombreIpress.required = true;
-        } else if (selectedValue === 'Universidad') {
+        } else if (selectedValue === 'UNIVERSIDAD') {
             universidadContainer.classList.remove('hidden-field');
             listaUniversidades.required = true;
-        } else if (selectedValue === 'Otra') {
+        } else if (selectedValue === 'OTRA') {
             otraOrganizacionContainer.classList.remove('hidden-field');
             nombreOtraOrganizacion.required = true;
         }
     };
 
+    // AÑADE ESTA NUEVA FUNCIÓN COMPLETA
+    const handleProfesionChange = () => {
+        const selectedProfesion = profesionSelect.value;
+        
+        // Vaciar y ocultar por defecto
+        especialidadSelect.innerHTML = '';
+        especialidadContainer.classList.add('hidden-field');
+        especialidadSelect.required = false;
 
+        if (selectedProfesion === 'MEDICINA HUMANA') {
+            populateSelect(especialidadSelect, especialidadesMedicina);
+            especialidadSelect.required = true;
+            especialidadContainer.classList.remove('hidden-field');
+        } else if (selectedProfesion === 'ENFERMERIA') {
+            populateSelect(especialidadSelect, especialidadesEnfermeria);
+            especialidadSelect.required = true;
+            especialidadContainer.classList.remove('hidden-field');
+        }
+    };
+// Y AHORA, LLENA EL MENÚ DE PROFESIONES
+    populateSelect(profesionSelect, profesiones);
+// Y AHORA, LLENA EL MENÚ DE PROFESIONES
+populateSelect(profesionSelect, profesiones);
 // --- LÓGICA 1: Habilitar/deshabilitar campos según el tipo de documento ---
     const toggleFieldsByDocumentType = () => {
         if (tipoDocumento.value === 'DNI') {
@@ -171,7 +232,8 @@ document.addEventListener('DOMContentLoaded', () => {
     numeroDocumento.addEventListener('input', () => { /* ... (código sin cambios) ... */ });
     correo.addEventListener('input', verificarEmails);
     verificarCorreo.addEventListener('input', verificarEmails);
-    
+    // AÑADE ESTE EVENT LISTENER EN LA SECCIÓN "EVENT LISTENERS"
+    profesionSelect.addEventListener('change', handleProfesionChange);
     // Nuevos event listeners para campos dinámicos
     paisSelect.addEventListener('change', handlePaisChange);
     tipoInstitucion.addEventListener('change', handleInstitucionChange);
@@ -209,7 +271,10 @@ form.addEventListener('submit', (e) => {
     // 1. Convertir FormData a un objeto simple de JavaScript
     const formData = new FormData(form);
     const dataObject = Object.fromEntries(formData.entries());
-
+    // ===== ESTA ES LA LÍNEA CLAVE QUE AÑADIMOS =====
+    // Aquí cambiamos el valor del check por el texto que queremos guardar.
+    dataObject.declaro = terminosAceptados ? 'Acepto' : 'No Acepto';
+    // ===============================================
     // 2. Enviar los datos como JSON
     fetch(scriptURL, {
         method: 'POST',
@@ -245,4 +310,8 @@ form.addEventListener('submit', (e) => {
 toggleFieldsByDocumentType();
 handlePaisChange();
 handleInstitucionChange();
+
+
+// Y AÑADE LA LLAMADA A LA FUNCIÓN AL FINAL DEL ARCHIVO, EN LA SECCIÓN "ESTADO INICIAL"
+handleProfesionChange();
 });
